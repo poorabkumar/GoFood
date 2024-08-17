@@ -18,7 +18,7 @@ app.use(express.json());
 app.use('/api', require("./Routes/CreateUser"));
 app.use('/api', require("./Routes/DisplayData"));
 app.use('/api', require("./Routes/OrderData"));
-const __dirname1 = path.resolve().split('\\').slice(0, -1).join('\\');
+const __dirname1 = path.resolve();
 console.log(__dirname1);
 app.use(express.static(path.join(__dirname1, "/build")));
 app.get('*', (req, res) => {
